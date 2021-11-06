@@ -1,0 +1,3 @@
+
+- https://www.youtube.com/watch?v=SVouy-Zd-_g ClojureScript: React with a Hiccup by David Vujic
+- https://github.com/DavidVujic/cljs-hello-world/tree/func-prog-2021-second-meetup#clojurescript-react-with-a-hiccup
