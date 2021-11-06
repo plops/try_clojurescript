@@ -1,1 +1,7 @@
-{:deps {org.clojure/clojurescript {:mvn/version "1.10.891"}}}
+;{:deps {org.clojure/clojurescript {:mvn/version "1.10.891"}}}
+
+{:source-paths ["src/hello_world"]
+ :dependencies [[reagent "1.0.0"]]
+ :dev-http {8080 "public"}
+ :builds {:target :browser
+          :modules {:main {:init-fn hello_world.core/init}}}}

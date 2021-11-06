@@ -1,3 +1,5 @@
-(ns hello-world.core)
+(ns hello-world.core
+  (:require [reagent.dom :as rdom]))
 
-(println "hello world")
+(defn init []
+  (println "hello world2"))

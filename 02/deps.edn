@@ -1,2 +1,9 @@
-{:deps {org.clojure/clojurescript {:mvn/version "1.10.891"}}
-       :paths ["src"]}
+{:deps {org.clojure/clojurescript
+        {:mvn/version "1.10.891"}}
+ :paths ["src"]
+ :aliases
+ {:dev
+  {:main-opts ["-m" "cljs.main"
+               "--compile"
+               "hello.core"
+               "repl"]}}}

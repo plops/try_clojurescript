@@ -18,4 +18,16 @@ wget https://github.com/clojure/clojurescript/releases/download/r1.10.891/cljs.j
 clj -M --main cljs.main --compile hello-world.core --repl
 
 
+
+clj -M -m cljs.main --serve
+
+
+clj -M -m cljs.main --optimizations advanced -c hello-world.core
+
+code
+open folder
+C-S-p start project repl
+shadow-cljs
 #+end_example
+
+- https://www.learn-clojurescript.com/
