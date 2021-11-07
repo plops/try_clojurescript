@@ -1,3 +1,5 @@
+- try with deps-new
+
 - init (install tool)
   #+begin_example
 clojure -Ttools install io.github.seancorfield/deps-new '{:git/tag "v0.4.0"}' :as new
@@ -8,5 +10,12 @@ clojure -A:deps -Tnew help/doc
   #+end_example
 - create app:
   #+begin_example
-clojure -Tnew app :name learn-cljs/weather
+clojure -Tnew app :template figwheel-main :name learn-cljs/weather
   #+end_example
+
+- run
+  #+begin_example
+clj -M:run-m
+  #+end_example
+
+- doesn't contain any mention of figwheel

@@ -1,2 +1,2 @@
-# clj -m cljs.main --compile hello.core --repl
-clj -M:dev
+clj -m cljs.main --compile hello.core --repl
+# clj -M:dev

@@ -1,9 +1,15 @@
+try to initiate project with clj-new
+- apparently carries old baggage, author suggests to use deps-new (in 04)
+
 
 - init
   #+begin_example
 clojure -X:new :name myname/myapp
 cd myapp
 clojure -M -m myname.myapp
+
+
+clj -X:new :template figwheel-main :name learn-cljs/weather :args '["+deps" "--reagent"]'
   #+end_example
 - run tests
   #+begin_example
