@@ -1,0 +1,12 @@
+- init (install tool)
+  #+begin_example
+clojure -Ttools install io.github.seancorfield/deps-new '{:git/tag "v0.4.0"}' :as new
+  #+end_example
+- get help:
+  #+begin_example
+clojure -A:deps -Tnew help/doc
+  #+end_example
+- create app:
+  #+begin_example
+clojure -Tnew app :name learn-cljs/weather
+  #+end_example
