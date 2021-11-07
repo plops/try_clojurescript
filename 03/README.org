@@ -15,3 +15,9 @@ clj -X:new :template figwheel-main :name learn-cljs/weather :args '["+deps" "--r
   #+begin_example
  clojure -T:build test
   #+end_example
+
+  #+begin_example
+  -->  Change into the 'weather' directory
+  -->  Start build with 'clojure -A:fig:build'
+
+  #+end_example
