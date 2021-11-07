@@ -1,0 +1,11 @@
+
+- init
+  #+begin_example
+clojure -X:new :name myname/myapp
+cd myapp
+clojure -M -m myname.myapp
+  #+end_example
+- run tests
+  #+begin_example
+ clojure -T:build test
+  #+end_example

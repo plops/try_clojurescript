@@ -1,0 +1,13 @@
+{:deps {org.clojure/clojurescript
+        {:mvn/version "1.10.891"}}
+ :paths ["src"]
+ {:aliases
+  {:new {:extra-deps {seancorfield/clj-new
+                      {:mvn/version "1.2.362"}}
+         :exec-fn clj-new/create
+         :exec-args {:template "app"}}}
+  {:dev
+   {:main-opts ["-m" "cljs.main"
+                "--compile"
+                "hello.core"
+                "repl"]}}}}
