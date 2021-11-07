@@ -1,0 +1,33 @@
+
+- https://www.youtube.com/watch?v=SVouy-Zd-_g ClojureScript: React with a Hiccup by David Vujic
+- https://github.com/DavidVujic/cljs-hello-world/tree/func-prog-2021-second-meetup#clojurescript-react-with-a-hiccup
+
+#+begin_example
+curl -O https://download.clojure.org/install/linux-install-1.10.3.1020.sh
+chmod a+x linux-install-1.10.3.1020.sh
+sudo ./linux-install-1.10.3.1020.sh
+sudo dnf install rlwrap
+
+wget https://github.com/clojure/clojurescript/releases/download/r1.10.891/cljs.jar
+#clojure --main cljs.main --compile hello-world.core --repl
+#java -cp cljs.jar cljs.main --compile  hello-world.core --repl
+
+#clj -M -m krell.main -v -co build.edn -c
+
+
+clj -M --main cljs.main --compile hello-world.core --repl
+
+
+
+clj -M -m cljs.main --serve
+
+
+clj -M -m cljs.main --optimizations advanced -c hello-world.core
+
+code
+open folder
+C-S-p start project repl
+shadow-cljs
+#+end_example
+
+- https://www.learn-clojurescript.com/
