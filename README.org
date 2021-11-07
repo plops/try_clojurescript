@@ -15,7 +15,8 @@
       - deps-new (author of clj-new suggests to use that)
 
 
-| code | level | comment                                                 |
-|   01 |       | barebones, only clj; don't know how to pull in figwheel |
-|   02 |       |                                                         |
-|      |       |                                                         |
+| code | level | comment                                                                 |
+|   01 |   10% | barebones, only clj and shadow-cljs; don't know how to pull in figwheel |
+|   02 |   10% | barebones, only clj                                                     |
+|   03 |   20% | clj-new                                                                 |
+|   04 |   5%  | deps-new                                                                |
