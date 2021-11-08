@@ -1,8 +1,7 @@
-{:deps {org.clojure/clojurescript
-        {:mvn/version "1.10.891"}
+{:deps {org.clojure/clojurescript {:mvn/version "1.10.891"}
         com.bhauman/figwheel-main {:mvn/version "0.2.14"}}
  :paths ["src" "target" "resources"]
  :aliases
   {:dev {:main-opts ["-m" "figwheel.main"
                      "-b" "dev"
-                     "-r"]}}}
+                     "--repl"]}}}

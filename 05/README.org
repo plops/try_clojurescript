@@ -1,3 +1,6 @@
 - Get Started with CLJS + Figwheel-Main (Between Two Parens)
 
 clj -A:dev
+
+figwheel hot reload still not working
+repl also not
