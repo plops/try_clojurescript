@@ -1,3 +1,3 @@
-(ns hello-world.app)
+(ns hello.app)
 
 (js/console.log "hello")
