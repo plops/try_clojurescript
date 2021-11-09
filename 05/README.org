@@ -4,3 +4,5 @@ clj -A:dev
 
 figwheel hot reload still not working
 repl also not
+
+https://figwheel.org/docs/installation.html#dependencies-with-cli-tools
