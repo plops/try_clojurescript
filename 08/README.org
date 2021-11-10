@@ -9,10 +9,15 @@ yarn watch
 
 - calva
   #+begin_example
-C-S-p
+open folder 08/
+
+  C-S-p
 >Start Project REPL...
 shadow-cljs
 :app
 :app
 
+Use
+M-Enter to execute top level s-expression
+C-Enter to execute single s-expression (can be inside others)
   #+end_example
