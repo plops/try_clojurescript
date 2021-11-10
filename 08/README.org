@@ -6,3 +6,13 @@ yarn
 yarn html
 yarn watch
 #+end_example
+
+- calva
+  #+begin_example
+C-S-p
+>Start Project REPL...
+shadow-cljs
+:app
+:app
+
+  #+end_example
