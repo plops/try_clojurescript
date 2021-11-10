@@ -1,19 +1,41 @@
 (ns app.main
   (:require [reagent.dom :as rdom]
-            ;[re-frame.core :as rf]
+            [re-frame.core :as rf] ; in-memory database, send events or subscribe
             ))
 
 
-;(defn main! []
-;  (println "[main]: loading"))
+
+;; events
+
+(rf/reg-event-db
+ :theme
+ (fn [db [_ theme]]
+   (assoc-in db [:theme :active]
+             theme)))
+
+(rf/reg-event-fx
+ :toggle-theme
+ (fn [_ [_ on?]]
+   {:dispatch [:theme (if on?
+                        :light
+                        :dark)]}))
+
+
+;; main
 
 (defn ^:dev/after-load reload! []
   (println "[main]: reload"))
 
+(defn toggle-theme [e]
+  (rf/dispatch [:toggle-theme (-> e
+                                  .-target
+                                  .-checked)]))
+
 (defn theme-toggle-field []
   [:input.theme-switch {:type "checkbox"
                         ;:class-name "theme-switch"
-                        :id "theme-toggle"}])
+                        :id "theme-toggle"
+                        :on-change toggle-theme}])
 
 (defn theme-toggle-label []
   [:label.switch-label
@@ -38,3 +60,11 @@
   (println "[main]: loading")
   (rdom/render [page]
                (main-element)))
+
+
+;; interactive browsing of re-frame database
+
+(comment
+  (require '[re-frame.db])
+  (-> @re-frame.db/app-db)
+  )
