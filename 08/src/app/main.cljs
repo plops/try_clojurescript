@@ -20,6 +20,14 @@
                         :light
                         :dark)]}))
 
+;; subscriptions
+
+(def <sub (comp deref rf/subscribe))
+
+(rf/reg-sub
+  :light-theme?
+  (fn [db _]
+    (= :light (get-in db [:theme :active]))))
 
 ;; main
 
@@ -42,15 +50,17 @@
    {;:class-name "switch-label"
     :for "theme-toggle"}])
 
-(defn greeting []
-  [:h1 "Good Evening"])
+(defn greeting [light-theme?]
+  [:h1 (if light-theme?
+         "Good day"
+         "Good evening")])
 
 (defn page []
   [:<>
    [theme-toggle-field]
    [:div#page ; {:id "page"}
     [theme-toggle-label]
-    [greeting]]])
+    [greeting @(rf/subscribe [:light-theme?])]]])
 
 (defn main-element []
   (-> js/document 
