@@ -4,8 +4,8 @@
             ))
 
 
-(defn main! []
-  (println "[main]: loading"))
+;(defn main! []
+;  (println "[main]: loading"))
 
 (defn ^:dev/after-load reload! []
   (println "[main]: reload"))
@@ -29,5 +29,6 @@
   (-> js/document (.getElementById "app")))
 
 (defn ^:export main []
+  (println "[main]: loading")
   (rdom/render [page]
                (main-element)))

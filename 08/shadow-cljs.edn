@@ -5,5 +5,5 @@
  :builds {:app {:output-dir "target/"
                 :asset-path "."
                 :target :browser
-                :modules {:main {:init-fn app.main/main!}}
+                :modules {:main {:init-fn app.main/main}}
                 :release {:compiler-options {:optimizations :advanced}}}}}
