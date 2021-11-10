@@ -1,0 +1,11 @@
+- https://www.youtube.com/watch?v=SVouy-Zd-_g
+
+https://shadow-cljs.github.io/docs/UsersGuide.html#js-deps
+http://r.tiye.me/shadow-cljs/shadow-cljs.org/
+https://github.com/minimal-xyz/minimal-shadow-cljs-browser/blob/master/shadow-cljs.edn
+
+#+begin_example
+yarn
+(mkdir -p target && cp assets/index.html target/)
+yarn shadow-cljs watch app
+#+end_example
