@@ -11,22 +11,28 @@
   (println "[main]: reload"))
 
 (defn theme-toggle-field []
-  [:input {:type "checkbox"
-           :class-name "theme-switch"
-           :id "theme-toggle"}])
+  [:input.theme-switch {:type "checkbox"
+                        ;:class-name "theme-switch"
+                        :id "theme-toggle"}])
 
 (defn theme-toggle-label []
-  [:label {:class-name "switch-label"
-           :for "theme-toggle"}])
+  [:label.switch-label
+   {;:class-name "switch-label"
+    :for "theme-toggle"}])
+
+(defn greeting []
+  [:h1 "Good Evening"])
 
 (defn page []
   [:<>
    [theme-toggle-field]
-   [:div {:id "page"}
-    [theme-toggle-label]]])
+   [:div#page ; {:id "page"}
+    [theme-toggle-label]
+    [greeting]]])
 
 (defn main-element []
-  (-> js/document (.getElementById "app")))
+  (-> js/document 
+      (.getElementById "app")))
 
 (defn ^:export main []
   (println "[main]: loading")
