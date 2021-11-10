@@ -60,7 +60,9 @@
    [theme-toggle-field]
    [:div#page ; {:id "page"}
     [theme-toggle-label]
-    [greeting @(rf/subscribe [:light-theme?])]]])
+    [greeting (<sub [:light-theme?])
+     ;@(rf/subscribe [:light-theme?])
+     ]]])
 
 (defn main-element []
   (-> js/document 
