@@ -1,1 +1,7 @@
-https://www.youtube.com/watch?v=SVouy-Zd-_g
+- https://www.youtube.com/watch?v=SVouy-Zd-_g
+- clojars.org to get reagent version
+
+- clj -A:dev
+
+npm init
+npm install react
