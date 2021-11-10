@@ -1,7 +1,9 @@
 {:source-paths ["src"]
- :dependencies []
+ :dependencies [[reagent "1.1.0"]
+                [re-frame "1.2.0"]]
  :dev-http {8080 "target/"}
  :builds {:app {:output-dir "target/"
                 :asset-path "."
                 :target :browser
-                :modules {:main {:init-fn app.main/main!}}}}}
+                :modules {:main {:init-fn app.main/main!}}
+                :release {:compiler-options {:optimizations :advanced}}}}}
