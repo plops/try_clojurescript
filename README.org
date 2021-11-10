@@ -22,4 +22,5 @@
 |   04 |    5% | deps-new                                                                |
 |   05 |   90% | minimal example with clj and figwheel-main                              |
 |   06 |    0% | copy of 05 with reagent, not working can't find react.js                |
-|   07 |    1% | copy of 06, minimal shadow-cljs                                         |
+|   07 |   80% | copy of 06, minimal shadow-cljs                                         |
+|   08 |       | copy of 07, add react                                                   |
