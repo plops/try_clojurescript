@@ -29,5 +29,5 @@
       "Make API call"]
      [:button
       {:on-click
-       #(rf-dispatch [::events/update-name "bla"])}
+       #(rf/dispatch [::events/update-name "bla"])}
       "Update name"]]))
