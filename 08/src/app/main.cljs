@@ -60,7 +60,7 @@
    [theme-toggle-field]
    [:div#page ; {:id "page"}
     [theme-toggle-label]
-    [greeting (<sub [:light-theme?])
+    [greeting (<sub  [:light-theme?])
      ;@(rf/subscribe [:light-theme?])
      ]]])
 
