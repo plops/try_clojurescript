@@ -31,5 +31,11 @@
                  :timeout         8000                                           ;; optional see API docs
                  :response-format (ajax/json-response-format 
                                    {:keywords? true})  ;; IMPORTANT!: You must provide this.
-                 :on-success      [:good-http-result]
+                 :on-success      [::fetch-users-success]
                  :on-failure      [:bad-http-result]}}))
+
+;; store user on success
+(rf/reg-event-db
+ ::fetch-users-success
+ (fn [db [_ data]]
+   (println data)))
