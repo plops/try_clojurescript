@@ -15,7 +15,7 @@
                 {:preloads [day8.re-frame-10x.preload]}
                 :dev
                 {:compiler-options
-                 {:closuer-defines
+                 {:closure-defines
                   {re-frame.trace-enabled? true
                    day8.re-frame.tracing.trace-enabled? true}}}
                 :release
