@@ -1,7 +1,9 @@
 (ns app.main
   (:require [reagent.dom :as rdom]
             [re-frame.core :as rf] ; in-memory database, send events or subscribe
-            ))
+            [app.events :as events]
+            [app.views :as views]
+            [app.config :as config]))
 
 
 
