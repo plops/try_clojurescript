@@ -1,19 +1,19 @@
 h1 {
-    color: rosybrown;
+    color: green;
 }
 
 
 html,body {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.7em;
+  /*  font-size: 1.7em; */
     margin: 0;
     padding: 0;
     height: 100%;
   }
   
-  p {
+  /*p {
     font-size: 0.4em;
-  }
+  }*/
   
   main {
     text-align: center;
