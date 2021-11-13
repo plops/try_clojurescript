@@ -9,3 +9,10 @@ yarn
 yarn watch
 # yarn shadow-cljs watch app
 #+end_example
+
+- browser setup (firefox)
+  - open developer tools
+  - F1 to go to settings
+  - advanced->disable http cache
+
+  - custom formatters not yet available
