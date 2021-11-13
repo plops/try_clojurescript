@@ -3,7 +3,7 @@
    [re-frame.core :as rf]
  ;  [app.db :as db]
    [day8.re-frame.http-fx]
-   [ajax.core :as ajax] ;; for use in response-format
+   [ajax.core :as ajax] ;; for use in response-format, convert json response back into clojure map
   ; [day8.re-frame.tracing :refer-macros [fn-traced]]
    ))
 
@@ -21,13 +21,15 @@
    (assoc db :name val)))
 
 ;; from https://github.com/day8/re-frame-http-fx
-(reg-event-fx                             ;; note the trailing -fx
- :handler-with-http                      ;; usage:  (dispatch [:handler-with-http])
+(rf/reg-event-fx                             ;; note the trailing -fx
+ ::fetch-users                ;; usage:  (dispatch [:handler-with-http])
  (fn [{:keys [db]} _]                    ;; the first param will be "world"
-   {:db   (assoc db :show-twirly true)   ;; causes the twirly-waiting-dialog to show??
+   {:db   (assoc db :loading true)   ;; causes the twirly-waiting-dialog to show??
     :http-xhrio {:method          :get
-                 :uri             "https://api.github.com/orgs/day8"
+                 ;; get some fake data
+                 :uri             "https://regres.in/api/users?page=2"
                  :timeout         8000                                           ;; optional see API docs
-                 :response-format (ajax/json-response-format {:keywords? true})  ;; IMPORTANT!: You must provide this.
+                 :response-format (ajax/json-response-format 
+                                   {:keywords? true})  ;; IMPORTANT!: You must provide this.
                  :on-success      [:good-http-result]
                  :on-failure      [:bad-http-result]}}))

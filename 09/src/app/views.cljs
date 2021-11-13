@@ -18,7 +18,7 @@
         users (rf/subscribe [::subs/users])]
     [:div
      [:h1
-      "Hello from" @name]
+      "Hello from " @name]
      (when @loading
        "Loading ...")
      (map display-user

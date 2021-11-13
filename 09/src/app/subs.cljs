@@ -10,6 +10,7 @@
 (rf/reg-sub
  ::loading
  (fn [db]
+   ;; get loading value from database
    (:loading db)))
 
 (rf/reg-sub
