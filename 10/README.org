@@ -1,0 +1,5 @@
+https://purelyfunctional.tv/guide/re-frame-building-blocks/
+https://cognitect.com/blog/2017/5/22/restate-your-ui-using-state-machines-to-simplify-user-interface-development
+
+https://www.cognitect.com/blog/2017/8/14/restate-your-ui-creating-a-user-interface-with-re-frame-and-state-machines.html
+https://github.com/jebberjeb/reframe-fsm/tree/master/login-fsm
