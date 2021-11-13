@@ -15,11 +15,11 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-      "http-server": "^14.0.0",
+    "http-server": "^14.0.0",
     "shadow-cljs": "^2.16.0"
   },
   "dependencies": {
-    "date-fns": "^2.25.0",
+    "highlight.js": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-tooltip": "^4.2.21"

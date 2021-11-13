@@ -5,73 +5,26 @@
 
 
 
-;; events
 
-(rf/reg-event-db
- :theme
- (fn [db [_ theme]]
-   (assoc-in db [:theme :active]
-             theme)))
 
-(rf/reg-event-fx
- :toggle-theme
- (fn [_ [_ on?]]
-   {:dispatch [:theme (if on?
-                        :light
-                        :dark)]}))
+;; core
 
-;; subscriptions
+(defn dev-setup []
+  (when config/debug?
+    (println "dev mode")))
 
-(def <sub (comp deref rf/subscribe))
-
-(rf/reg-sub
-  :light-theme?
-  (fn [db _]
-    (= :light (get-in db [:theme :active]))))
-
-;; main
-
-(defn ^:dev/after-load reload! []
-  (println "[main]: reload"))
-
-(defn toggle-theme [e]
-  (rf/dispatch [:toggle-theme (-> e
-                                  .-target
-                                  .-checked)]))
-
-(defn theme-toggle-field []
-  [:input.theme-switch {:type "checkbox"
-                        ;:class-name "theme-switch"
-                        :id "theme-toggle"
-                        :on-change toggle-theme}])
-
-(defn theme-toggle-label []
-  [:label.switch-label
-   {;:class-name "switch-label"
-    :for "theme-toggle"}])
-
-(defn greeting [light-theme?]
-  [:h1 (if light-theme?
-         "Good day"
-         "Good evening")])
-
-(defn page []
-  [:<>
-   [theme-toggle-field]
-   [:div#page ; {:id "page"}
-    [theme-toggle-label]
-    [greeting (<sub  [:light-theme?])
-     ;@(rf/subscribe [:light-theme?])
-     ]]])
-
-(defn main-element []
-  (-> js/document 
-      (.getElementById "app")))
+(defn ^:dev/after-load mount-root []
+  (rf/clear-subscription-cache)
+  (let [root-el (.getElementById js/document "app")]
+    (rdom/unmount-component-at-node root-el)
+    (rdom/render [views/main-panel]
+                 root-el)))
 
 (defn ^:export main []
   (println "[main]: loading")
-  (rdom/render [page]
-               (main-element)))
+  (rf/dispatch-sync [::events/initialize-db])
+  (dev-setup)
+  (mount-root))
 
 
 ;; interactive browsing of re-frame database

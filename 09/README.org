@@ -1,2 +1,11 @@
-https://www.youtube.com/watch?v=yVb8PS6a4Mk http-fx
-https://github.com/danownsthisspace/clojurescript-re-frame-http-fx-eexample
+- https://www.youtube.com/watch?v=yVb8PS6a4Mk http-fx
+- https://github.com/danownsthisspace/clojurescript-re-frame-http-fx-eexample
+
+
+- edit package.json with visual studio code. it knows how to find most recent versions
+#+begin_example
+yarn
+(mkdir -p target && cp assets/{index.html,*.css} target/)
+yarn watch
+# yarn shadow-cljs watch app
+#+end_example
