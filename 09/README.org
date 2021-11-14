@@ -17,6 +17,7 @@ yarn watch
 
   - custom formatters not yet available
 
+#+begin_example
 
 Navigation
 Default keybinding 	Action
@@ -71,3 +72,4 @@ ctrl+alt+x ctrl+left 	Cut Backward Sexp
 ctrl+alt+x ctrl+down 	Cut Forward Down Sexp
 ctrl+alt+x ctrl+up 	Cut Backward Up Sexp
 ctrl+alt+x ctrl+alt+right 	Cut Close List
+#+end_example
