@@ -17,8 +17,13 @@ yarn watch
 
   - custom formatters not yet available
 
-#+begin_example
 
+- the key bindings for paredit are a bit different in vs code compared
+  to emacs. i'm particular confused about 'Barf Backward' (which is
+  C-right in emacs and C-M-> here) and yanking the rest of the
+  s-expression (C-k in emacs. It clears in vs code but I can't paste
+  it later)
+#+begin_example
 Navigation
 Default keybinding 	Action
 ctrl+right 	Forward Sexp
