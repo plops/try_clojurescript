@@ -35,5 +35,7 @@
 ;; store user on success
 (rf/reg-event-db
  ::fetch-users-success
- (fn [db [_ data]]
-   (println data)))
+ (fn [db [_ {:keys [data]}]]
+   (-> db
+       (assoc :loading false)
+       (assoc :users data))))
