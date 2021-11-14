@@ -24,8 +24,9 @@
    {:db   (assoc db :loading true)   ;; causes the twirly-waiting-dialog to show??
     :http-xhrio {:method          :get
                  ;; get some fake data
-                 :uri             "https://regres.in/api/users?page=2"
-                 :timeout         8000                                           ;; optional see API docs
+                 :uri             "https://reqres.in/api/users?page=2"
+                 :timeout         8000                      ;; optional see API docs
+                 ;:mode "cors" ;; https://developer.mozilla.org/en-US/docs/Web/API/Request#properties
                  :response-format (ajax/json-response-format
                                    {:keywords? true})  ;; IMPORTANT!: You must provide this.
                  :on-success      [::fetch-users-success]
