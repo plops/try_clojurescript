@@ -6,7 +6,8 @@
 
 (defn display-user [{:keys [id avatar email]
                      first-name :first_name}]
-  [:div.horizontal {:key id}
+  ;; destructure the data from the reqres.in response
+  [:div.horizontal {:key id} ;; every element should have a unique id
    [:img.pr-15 {:src avatar}]
    [:div
     [:h2 first-name]
