@@ -5,7 +5,7 @@
    [app.subs :as subs]))
 
 (defn display-user [{:keys [id avatar email]
-                     first-name :first-name}]
+                     first-name :first_name}]
   [:div.horizontal {:key id}
    [:img.pr-15 {:src avatar}]
    [:div
