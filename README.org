@@ -24,5 +24,5 @@
 |   06 |    0% | copy of 05 with reagent, not working can't find react.js                |
 |   07 |   80% | copy of 06, minimal shadow-cljs *first real example*                    |
 |   08 |   90% | copy of 07, add react                                                   |
-|   09 |       | copy of 08, http-fx                                                     |
+|   09 |   90% | copy of 08, http-fx                                                     |
 |   10 |       | copy of 08, state machine                                               |
