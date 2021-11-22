@@ -1,0 +1,12 @@
+;; https://clojure.org/guides/deps_and_cli
+{:deps {;org.clojure/clojure {:mvn/version "1.10.3.1020"}
+        overtone/overtone {:mvn/version "0.10.6"}
+        ;org.clojure/clojurescript {:mvn/version "1.10.844"} ;891
+        ;com.bhauman/figwheel-main {:mvn/version "0.2.14"}
+        ;com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+        }
+ :paths ["src"]
+ :aliases
+  {:dev {:main-opts ["-m" "figwheel.main"
+                     "-b" "dev"
+                     "--repl"]}}}
