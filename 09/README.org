@@ -1,7 +1,12 @@
 - https://www.youtube.com/watch?v=yVb8PS6a4Mk http-fx
 - https://github.com/danownsthisspace/clojurescript-re-frame-http-fx-eexample
 
+- usage of emacs/cider:
+  - https://docs.cider.mx/cider/cljs/shadow-cljs.html
+  - open a file in the project in emacs (e.g. shadow-cljs.edn)
+  - M-x cider-jack-in-cljs
 
+- usage of visual studio code
 - edit package.json with visual studio code. it knows how to find most recent versions
 #+begin_example
 yarn

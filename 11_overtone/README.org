@@ -1,1 +1,24 @@
+sudo dnf install supercollider qjackctl
+qjackctl
 clj -X hello/run
+
+# i'm blocked: it always crashes
+
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+could not initialize audio.
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fd0e9a34ba7, pid=349972, tid=350036
+#
+# JRE version: OpenJDK Runtime Environment 18.9 (11.0.13+8) (build 11.0.13+8)
+# Java VM: OpenJDK 64-Bit Server VM 18.9 (11.0.13+8, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libscsynth.so.1+0x63ba7]  World_WaitForQuit+0x7
+
+
+
+code .
+C-S-p -> Calva start repl -> deps.edn
