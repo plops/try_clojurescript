@@ -5,7 +5,8 @@
   - https://docs.cider.mx/cider/cljs/shadow-cljs.html
   - open a file in the project in emacs (e.g. shadow-cljs.edn)
   - M-x cider-jack-in-cljs
-
+  - or M-x cider-connect -> localhost -> default port -> shadow -> :browser-repl
+  - open main.cljs and press C-c C-k
 - usage of visual studio code
 - edit package.json with visual studio code. it knows how to find most recent versions
 #+begin_example
