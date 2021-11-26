@@ -26,3 +26,7 @@
 |   08 |   90% | copy of 07, add react                                                   |
 |   09 |   90% | copy of 08, http-fx                                                     |
 |   10 |       | copy of 08, state machine                                               |
+
+
+- spider tutorial
+  https://www.youtube.com/watch?v=IvTDzKVL58Y
