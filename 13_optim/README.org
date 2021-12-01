@@ -25,3 +25,12 @@ tar xaf commons*gz
   - 1.2k gh
   - https://github.com/knowm/XChart
   - http://knowm.org/open-source/xchart
+
+- fft library
+  - https://github.com/wendykierp/JTransforms
+#+begin_example
+        <groupId>com.github.wendykierp</groupId>
+        <artifactId>JTransforms</artifactId>
+        <version>3.1</version>
+        <classifier>with-dependencies</classifier>
+#+end_example
