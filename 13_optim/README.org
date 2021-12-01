@@ -34,3 +34,25 @@ tar xaf commons*gz
         <version>3.1</version>
         <classifier>with-dependencies</classifier>
 #+end_example
+
+- image processing
+  https://sksamuel.github.io/scrimage/#quick-examples
+  
+https://github.com/imagej/imagej2
+#+begin_example
+<parent>
+  <groupId>org.scijava</groupId>
+  <artifactId>pom-scijava</artifactId>
+  <version>30.0.0</version>
+</parent>
+...
+<dependency>
+  <groupId>net.imagej</groupId>
+  <artifactId>imagej</artifactId>
+</dependency>
+#+end_example
+
+
+- We recommend inheriting from the pom-scijava parent, although it is
+not required. (If you do not, you will need to include the <version>
+of ImageJ2 in your <dependency> declaration.)
