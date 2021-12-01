@@ -1,0 +1,9 @@
+# https://github.com/google/capillary no one seems to use that
+
+
+- https://commons.apache.org/proper/commons-math/userguide/fitting.html
+#+begin_example
+wget https://dlcdn.apache.org//commons/math/binaries/commons-math3-3.6.1-bin.tar.gz
+# 18MB, 2.2MB jar file inside
+tar xaf commons*gz
+#+end_example
