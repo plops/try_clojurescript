@@ -1,5 +1,6 @@
 ;; https://clojure.org/guides/deps_and_cli
 {:deps {;org.clojure/clojure {:mvn/version "1.10.3.1020"}
         ;com.google.capillary/lib {:mvn/version "1.0.0"}
-        org.apache.commons/commons-math3 {:mvn/version "3.6.1"}}
+        org.apache.commons/commons-math3 {:mvn/version "3.6.1"}
+        org.knowm.xchart/xchart {:mvn/version "3.8.1"}}
  :paths ["src"]}

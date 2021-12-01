@@ -19,3 +19,9 @@ tar xaf commons*gz
     <artifactId>commons-math3</artifactId>
     <version>3.6.1</version>
 #+end_example
+
+- plotting library:
+- xchart
+  - 1.2k gh
+  - https://github.com/knowm/XChart
+  - http://knowm.org/open-source/xchart
