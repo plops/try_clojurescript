@@ -19,10 +19,14 @@
 (QuickChart/getChart "sample chart"
                      "x"
                      "y"
-                     ["y(x)"] 
-                     (into-array ^double (map double [0 1 2]))
-                     [(into-array ^double (map double [2 1 0.1]))]
+                     "y(x)" 
+                     (double-array 3 [0 1 2])
+                     (double-array 3 [2 1 0.1])
                      )
+(type (into-array ^double (map double [2 1 0.1])))
+
+(double-array 3 [2 1 0.1])
+
 (type QuickChart/getChart)
 
 (clojure.pprint/print-table
