@@ -16,13 +16,16 @@
                                  (aget params 2))))
   ))
 
-(QuickChart/getChart "sample chart"
-                     "x"
-                     "y"
-                     "y(x)" 
-                     (double-array 3 [0 1 2])
-                     (double-array 3 [2 1 0.1])
-                     )
+(let [chart (QuickChart/getChart "sample chart"
+                           "x"
+                           "y"
+                           "y(x)" 
+                           (double-array 3 [0 1 2])
+                           (double-array 3 [2 1 0.1])
+                           )
+      s (SwingWrapper. chart)]
+  (.displayChart s)
+  )
 (type (into-array ^double (map double [2 1 0.1])))
 
 (double-array 3 [2 1 0.1])
