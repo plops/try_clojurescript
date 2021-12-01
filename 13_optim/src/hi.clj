@@ -1,6 +1,7 @@
 (ns hi
   (:import (org.apache.commons.math3.fitting GaussianCurveFitter WeightedObservedPoints)
-           (org.knowm.xchart XYChart QuickChart SwingWrapper)))
+           (org.knowm.xchart XYChart QuickChart SwingWrapper BitmapEncoder BitmapEncoder$BitmapFormat)
+           ))
 
 (defn -main [& _]
   (let [obs (WeightedObservedPoints.)]
@@ -14,9 +15,7 @@
     (println "fit result:" (list (aget params 0)
                                  (aget params 1)
                                  (aget params 2))))
-  ))
-
-(let [chart (QuickChart/getChart "sample chart"
+  (let [chart (QuickChart/getChart "sample chart"
                            "x"
                            "y"
                            "y(x)" 
@@ -25,7 +24,17 @@
                            )
       s (SwingWrapper. chart)]
   (.displayChart s)
+  (BitmapEncoder/saveBitmap chart "/dev/shm/Sample_Chart" BitmapEncoder$BitmapFormat/PNG
+                            )
   )
+  ))
+
+(-main nil)
+(type BitmapEncoder)
+(type BitmapEncoder$BitmapFormat)
+
+
+
 (type (into-array ^double (map double [2 1 0.1])))
 
 (double-array 3 [2 1 0.1])
@@ -36,6 +45,10 @@
  (sort-by :name
   (filter :exception-types
           (:members (clojure.reflect/reflect QuickChart)))))
+(clojure.pprint/print-table
+ (sort-by :name
+  (filter :exception-types
+          (:members (clojure.reflect/reflect BitmapEncoder)))))
 
 
 
