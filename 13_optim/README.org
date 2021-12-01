@@ -10,3 +10,12 @@ tar xaf commons*gz
 
 - how to run clojure: https://clojureverse.org/t/how-to-effectively-use-deps-cli/4787/4
 - based on this i wrote run.sh
+- try to find documentation how to get the jar in tools.deps
+  - https://github.com/clojure/tools.deps.alpha
+  - https://clojure.org/reference/deps_and_cli
+  - the maven classifier https://mvnrepository.com/artifact/org.apache.commons/commons-math3/3.6.1
+#+begin_example
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-math3</artifactId>
+    <version>3.6.1</version>
+#+end_example
