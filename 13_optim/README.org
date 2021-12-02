@@ -28,6 +28,8 @@ tar xaf commons*gz
 
 - fft library
   - https://github.com/wendykierp/JTransforms
+  - 1024x1024 fft takes 12s
+  - fftw takes 2.8s
 #+begin_example
         <groupId>com.github.wendykierp</groupId>
         <artifactId>JTransforms</artifactId>
@@ -56,3 +58,11 @@ https://github.com/imagej/imagej2
 - We recommend inheriting from the pom-scijava parent, although it is
 not required. (If you do not, you will need to include the <version>
 of ImageJ2 in your <dependency> declaration.)
+
+https://imagej.net/libs/imglib2/
+
+- scientific libraries
+  - https://scijava.org/
+
+- encryption with openssl and java
+  https://www.javacodegeeks.com/2020/04/encrypt-with-openssl-decrypt-with-java-using-openssl-rsa-public-private-keys.html
