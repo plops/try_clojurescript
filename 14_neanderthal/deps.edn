@@ -1,0 +1,27 @@
+{:deps {;org.clojure/clojure {:mvn/version "1.10.3.1020"}
+        uncomplicate/neanderthal {:mvn/version "0.43.3"}
+        nrepl/nrepl {:mvn/version "LATEST"}
+        cider/cider-nrepl {:mvn/version "LATEST"}
+        ;refactor-nrepl/refactor-nerpl {:mvn/version "LATEST"}
+        }
+ :paths ["src"]
+ :aliases
+ {:repl
+  {:main-opts ["-m" "nrepl.cmdline"
+                "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
+                "--bind"  "0.0.0.0"
+               "--port" "8889"]
+   :jvm-opts
+   ["-Dclojure.compiler.direct-linking=true"
+    "-XX:MaxDirectMemorySize=16g"
+    "-XX:+UseLargePages"
+    "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED"
+    "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED"]}}
+
+ :jvm-opts
+ ["-Dclojure.compiler.direct-linking=true"
+  "-XX:MaxDirectMemorySize=16g"
+  "-XX:+UseLargePages"
+  "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED"
+  "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED"]
+ }
