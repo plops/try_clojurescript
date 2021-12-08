@@ -30,4 +30,18 @@
 (def zz (rand-normal! (dge 3 2)))
 zz
 
+(unl/ev! (rand-normal! (dge 3 3)))
+
 (axpy x x)
+
+(rand-normal! (dge 3 2))
+
+(unl/svd (rand-normal! (dge 3 3)))
+
+(unl/svd! (rand-normal! (dge 3 2))
+          3)
+
+(dge 2 2)
+
+(unl/ls (rand-normal! (dge 2 2))
+        (rand-normal! (dv 2)))
