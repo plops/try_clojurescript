@@ -29,3 +29,6 @@ sudo yum install intel-oneapi-mkl-devel # 4.6GB
 #+begin_example
 source setvars.sh 
 #+end_example
+
+
+https://github.com/uncomplicate/neanderthal/issues/115
