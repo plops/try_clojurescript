@@ -37,10 +37,12 @@ tar xaf commons*gz
         <classifier>with-dependencies</classifier>
 #+end_example
 
-- image processing
+- image processing scrimage
   https://sksamuel.github.io/scrimage/#quick-examples
   
 https://github.com/imagej/imagej2
+
+https://github.com/qupath/qupath digital pathology
 #+begin_example
 <parent>
   <groupId>org.scijava</groupId>

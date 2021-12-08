@@ -1,8 +1,10 @@
-https://github.com/davidpham87/neanderthal-intro-wshop/blob/master/src/linalg/neanderthal.clj
+- https://github.com/davidpham87/neanderthal-intro-wshop/blob/master/src/linalg/neanderthal.clj
 
 - mkl on fedora
-
 https://www.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/top/installation/install-using-package-managers/yum-dnf-zypper.html
+#+begin_example
+
+
 
 tee > /tmp/oneAPI.repo << EOF
 [oneAPI]
@@ -20,3 +22,10 @@ sudo dnf config-manager --add-repo /etc/yum.repos.d/oneAPI.repo
 sudo yum install intel-basekit # 15GB
 sudo yum install intel-oneapi-mkl-devel # 4.6GB
 
+#+end_end
+
+- make library available
+
+#+begin_example
+source setvars.sh 
+#+end_example
